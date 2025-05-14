@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   imports: [RouterLink],
   template: `
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-md ">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -25,22 +25,16 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="#"
-                routerLink="/contacts"
+                routerLink="contacts"
                 >Contacts</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" routerLink="/profile">Profile</a>
+              <a class="nav-link" routerLink="profile">Profile</a>
             </li>
 
             <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                aria-disabled="true"
-                routerLink="/settings"
-                >Settings</a
-              >
+              <a class="nav-link " routerLink="settings">Settings</a>
             </li>
           </ul>
         </div>
