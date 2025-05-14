@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   template: `
     <nav class="navbar navbar-expand-md ">
       <div class="container-fluid">
@@ -23,18 +23,26 @@ import { RouterLink } from '@angular/router';
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link"
                 aria-current="page"
                 routerLink="contacts"
+                routerLinkActive="active"
                 >Contacts</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="profile">Profile</a>
+              <a class="nav-link" routerLink="profile" routerLinkActive="active"
+                >Profile</a
+              >
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " routerLink="settings">Settings</a>
+              <a
+                class="nav-link  "
+                routerLink="settings"
+                routerLinkActive="active"
+                >Settings</a
+              >
             </li>
           </ul>
         </div>
