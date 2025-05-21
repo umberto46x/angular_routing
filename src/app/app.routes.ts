@@ -7,7 +7,8 @@ import { FilenotfoundComponent } from './core/filenotfound.component';
 export const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'settings', component: SettingsComponent },
+  { path: 'profile/:userId', component: ProfileComponent },
+  { path: 'settings', component: SettingsComponent, data: { theme: 'Dark' } },
   { path: '404', component: FilenotfoundComponent },
   { path: '', redirectTo: 'contacts', pathMatch: 'full' },
   { path: '**', redirectTo: '404', pathMatch: 'full' },

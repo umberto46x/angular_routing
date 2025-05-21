@@ -1,10 +1,11 @@
 import { Component, Input, input } from '@angular/core';
 import { User } from '../models/User';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
+  imports: [CommonModule, RouterModule],
   selector: 'app-card',
-  imports: [CommonModule],
   template: `
     <div class="card" style="width: 18rem;">
       <div class="card-header" (click)="visible = !visible">
@@ -17,6 +18,10 @@ import { CommonModule } from '@angular/common';
         <div>
           <ng-content></ng-content>
         </div>
+
+        <a routerLink="../profile/{{ user?.id }}" routerLinkActive="active">
+          <button class="btn btn-primary">Go to Profile</button></a
+        >
 
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
